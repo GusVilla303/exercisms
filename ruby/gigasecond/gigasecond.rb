@@ -1,3 +1,6 @@
+require 'date'
+require 'time'
+
 class Gigasecond
   def self.from(start_date)
     start_time = start_date.to_time
