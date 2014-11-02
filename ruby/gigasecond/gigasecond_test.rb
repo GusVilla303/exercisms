@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/pride'
 require 'date'
 require 'time'
 require_relative 'gigasecond'
@@ -11,22 +12,19 @@ class GigasecondTest < MiniTest::Unit::TestCase
   end
 
   def test_2
-    skip
     gs = Gigasecond.from(Date.new(1977, 6, 13))
     assert_equal Date.new(2009, 2, 19), gs
   end
 
   def test_3
-    skip
     gs = Gigasecond.from(Date.new(1959, 7, 19))
     assert_equal Date.new(1991, 3, 27), gs
   end
 
   def test_yourself
-    skip
-    your_birthday = Date.new(year, month, day)
+    your_birthday = Date.new(1979, 11, 27)
     gs = Gigasecond.from(your_birthday)
-    assert_equal Date.new(2009, 1, 31), gs
+    assert_equal Date.new(2011, 8, 05), gs
   end
 
 end
