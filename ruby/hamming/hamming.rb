@@ -2,7 +2,6 @@ require 'pry'
 
 class Hamming
   def self.compute(first_strand, second_strand)
-    binding.pry
     strand_1 = first_strand.chars
     strand_2 = second_strand.chars
     shorter_strand = compare_strand_lengths(strand_1, strand_2).first
