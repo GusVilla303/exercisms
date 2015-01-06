@@ -1,26 +1,16 @@
 class Complement
-  NUCLEOTIDES = { 'G' => 'C',
+  NUCLEOTIDES = {
+                  'G' => 'C',
                   'C' => 'G',
                   'T' => 'A',
                   'A' => 'U'
                 }
 
   def self.of_dna(sequence)
-    rna_complement = ''
-
-    sequence.chars.each do |nucleotide|
-      rna_complement << NUCLEOTIDES[nucleotide]
-    end
-    rna_complement
+    sequence.chars.map { |e| NUCLEOTIDES[e] }.join
   end
 
   def self.of_rna(sequence)
-    dna_complement = ''
-
-    sequence.chars.each do |nucleotide|
-      dna_complement << NUCLEOTIDES.key(nucleotide)
-    end
-    dna_complement
+    sequence.chars.map { |e| NUCLEOTIDES.key(e) }.join
   end
-
 end
