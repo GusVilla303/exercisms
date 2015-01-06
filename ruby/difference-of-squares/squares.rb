@@ -10,10 +10,10 @@ class Squares
   end
 
   def sum_of_squares
-    (1..number).map { |n| n**2 }.reduce(:+)
+    (1..number).reduce(0) { |sum, n| sum += n**2 }
   end
 
   def difference
-    square_of_sums - sum_of_squares    
+    square_of_sums - sum_of_squares
   end
 end
