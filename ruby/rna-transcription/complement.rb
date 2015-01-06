@@ -1,5 +1,9 @@
 class Complement
-  NUCLEOTIDES = { 'G' => 'C', 'C' => 'G', 'T' => 'A', 'A' => 'U' }
+  NUCLEOTIDES = { 'G' => 'C',
+                  'C' => 'G',
+                  'T' => 'A',
+                  'A' => 'U'
+                }
 
   def self.of_dna(sequence)
     rna_complement = ''
