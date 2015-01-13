@@ -1,21 +1,16 @@
-require 'prime'
-
 class Raindrops
-  def self.convert(number)
-    factors = number.prime_division.flatten
-    string = ''
 
-    factors.each do |n|
-      if n == 3
-        string += 'Pling'
-      elsif n == 5
-        string += 'Plang'
-      elsif n == 7
-        string += 'Plong'
-      else
-        number.to_s
-      end
-    end
+  SOUNDS =  {
+              3 => "Pling",
+              5 => "Plang",
+              7 => "Plong"
+            }
+
+
+  def self.convert(number)
+    string = ''
+    SOUNDS.each {|prime, sound| string += sound if number % prime == 0 }
     string.empty? ? number.to_s : string
   end
+
 end
