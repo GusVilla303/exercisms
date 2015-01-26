@@ -1,4 +1,4 @@
-class Roman
+class Fixnum
 
   NUMERALS = {
     'M'  => 1000,
@@ -17,8 +17,15 @@ class Roman
   }
 
   def to_roman
-    number = ''
+    number  = self
+    numeral = ''
 
+    NUMERALS.each do |symbol, value|
+      while number >= value
+        numeral << symbol
+        number -= value
+      end
+    end
+    numeral
   end
-
 end
