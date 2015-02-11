@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative 'prime'
 
 class TestPrimes < MiniTest::Unit::TestCase
@@ -7,7 +8,6 @@ class TestPrimes < MiniTest::Unit::TestCase
   end
 
   def test_second
-    skip
     assert_equal 3, Prime.nth(2)
   end
 
