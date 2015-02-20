@@ -8,6 +8,7 @@ class TestPrimes < MiniTest::Unit::TestCase
   end
 
   def test_second
+    skip
     assert_equal 3, Prime.nth(2)
   end
 
