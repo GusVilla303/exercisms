@@ -1,6 +1,6 @@
 function Bob() {
   this.hey = function(input){
-    if (input)
+    return "Whatever.";
 
   };
 }
